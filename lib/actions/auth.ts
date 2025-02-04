@@ -78,6 +78,6 @@ export const signUp = async (param: AuthCredentials) => {
         await signInWithCredentials({ email, password })
         return { success: true }
     } catch (error) {
-        return { success: false, error: "SignUp Error!" }
+        return { success: false, error: `Signup error ${error}` }
     }
 }
